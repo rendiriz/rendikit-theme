@@ -1,5 +1,9 @@
-'use strict'
+const theme = 'SOON';
 
-require('./src/color')
+import { Normal, Bootstrap } from './src/color/index';
 
-module.exports = "what's your favorite flavor of ice cream, buddy? I LIKE THEM ALL";
+export const Theme = theme;
+export const Color = {
+  Normal,
+  Bootstrap
+};

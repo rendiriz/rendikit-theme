@@ -1,9 +1,12 @@
-'use strict';
+import { getCode } from '../_core/helpers/color';
 
-function Bootstrap(color) {
-  return color;
+const normal = (code) => {
+  return getCode('normal', code);
 }
 
-module.exports = {
-  Bootstrap
+const bootstrap = (code) => {
+  return getCode('bootstrap', code);
 }
+
+export const Normal = normal;
+export const Bootstrap = bootstrap;
