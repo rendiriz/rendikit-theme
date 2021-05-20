@@ -1,4 +1,10 @@
-const color = [
+type ColorData = {
+  code: string;
+  normal: string;
+  bootstrap: string;
+};
+
+const color: ColorData[] = [
   // Theme
   { code: 'primary', normal: '#0D6EFD', bootstrap: 'yellow' },
   { code: 'secondary', normal: '#6C757D', bootstrap: 'secondary' },
@@ -109,12 +115,12 @@ const color = [
   { code: 'BG900', normal: '#001B3D', bootstrap: 'blue-gray-900' },
 ];
 
-const codeConvert = (type, code) => {
+function codeConvert(type: string, code: string): string {
   const find = color.find(obj => {
     return obj.code === code
   })
 
-  let result;
+  let result: string;
   if (type === 'normal') {
     result = find.normal;
   } else if (type === 'bootstrap') {
