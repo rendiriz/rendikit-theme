@@ -1,3 +1,5 @@
+'use strict';
+
 function Bootstrap(color) {
   return color;
 }

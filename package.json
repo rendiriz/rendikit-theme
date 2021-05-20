@@ -1,13 +1,17 @@
 {
-  "name": "@rendiriz/theme",
-  "version": "1.0.0",
+  "name": "rendikit-theme",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "svelte": "src/index.js",
   "exports": {
     ".": "dist/index.js",
     "./color": "dist/color/index.js"
   },
   "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +29,9 @@
   },
   "devDependencies": {
     "dotenv": "^9.0.2",
-    "nodemon": "^2.0.7"
+    "rollup": "^2.48.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "svelte": "^3.38.2"
   }
 }
